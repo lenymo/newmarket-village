@@ -13,6 +13,9 @@ var sourcemaps      = require('gulp-sourcemaps');
 var sass            = require('gulp-sass');
 var autoprefixer    = require('gulp-autoprefixer');
 
+// HTML.
+var include = require('gulp-file-include');
+
 // JavaScript.
 // var concat          = require('gulp-concat');
 // var uglify          = require('gulp-uglify');
@@ -50,7 +53,22 @@ gulp.task('scss', function () {
     }))
     .pipe( sourcemaps.write() )
     .pipe( gulp.dest('build/css') );
+    // .pipe(livereload());
+});
 
+
+//
+//  HTML
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+gulp.task('html', function() {
+  gulp.src('src/html/pages/*.html')
+    .pipe(include({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe( gulp.dest('build/') );
+    // .pipe(livereload());
 });
 
 

@@ -4,7 +4,20 @@
 //  TYPOGRAPHY
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
+//
+//  COLORS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 $base-font-color: $color-gray-3;
+
+
+//
+//  FONT FAMILIES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$base-font-family: 'Montserrat', 'helvetica', 'arial', sans-serif;
+$heading-font-family: $base-font-family;
 
 
 //
@@ -13,6 +26,10 @@ $base-font-color: $color-gray-3;
 
 html {
   font-size: $base-font-size;
+}
+
+body {
+  font-family: $base-font-family;
 }
 
 

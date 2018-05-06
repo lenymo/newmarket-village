@@ -1,0 +1,42 @@
+
+
+//
+//  SITE HEADER NAV
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  VARIABLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header-nav {
+    background: rgba($black, .75);
+  }
+}
+
+
+//
+//  LIST ITEM
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header-nav__list-item {
+    display: inline-block;
+  }
+}
+
+
+//
+//  LINK
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-header-nav__link {
+  color: $white;
+  display: block;
+}

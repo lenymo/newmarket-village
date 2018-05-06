@@ -37,6 +37,7 @@
 // HTML components
 @import 'components/media';
 @import 'components/button';
+@import 'components/nav';
 
 // Custom components.
 
@@ -48,6 +49,11 @@
 
 @import 'layout/grid';
 @import 'layout/site-header';
+@import 'layout/site-header-nav';
+@import 'layout/footer';
+@import 'layout/footer-signup';
+@import 'layout/footer-social';
+@import 'layout/footer-bottom';
 @import 'layout/section';
 
 

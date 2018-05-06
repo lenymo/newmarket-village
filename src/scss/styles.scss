@@ -1,0 +1,64 @@
+
+//
+//  STYLES INDEX
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  CONFIGURATION & HELPERS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './abstracts/variables';
+@import './abstracts/color';
+@import './abstracts/functions';
+@import './abstracts/media-queries';
+
+
+//
+//  VENDOR
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './vendors/normalize';
+
+
+//
+//  BASE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './base/base';
+@import './base/typography';
+
+
+//
+//  COMPONENTS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './components/media';
+@import './components/button';
+
+// React components.
+@import './components/property';
+@import './components/saved';
+
+
+
+//
+//  LAYOUT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './layout/grid';
+@import './layout/site-header';
+@import './layout/section';
+
+
+//
+//  PAGES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@import './pages/home';
+
+
+
+// Basic 7-1 structure taken from:
+// https://github.com/HugoGiraudel/sass-boilerplate
+// and https://sass-guidelin.es/#architecture

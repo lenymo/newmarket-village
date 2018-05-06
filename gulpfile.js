@@ -8,13 +8,14 @@
 var gulp            = require('gulp');
 var del             = require('del');
 var sourcemaps      = require('gulp-sourcemaps');
+var webserver       = require('gulp-webserver');
 
 // Styles.
 var sass            = require('gulp-sass');
 var autoprefixer    = require('gulp-autoprefixer');
 
 // HTML.
-var include = require('gulp-file-include');
+var include         = require('gulp-file-include');
 
 // JavaScript.
 // var concat          = require('gulp-concat');
@@ -73,12 +74,26 @@ gulp.task('html', function() {
 
 
 //
+//  WEB SERVER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+gulp.task('webserver', function() {
+  gulp.src('build/')
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
+});
+
+
+//
 //  WATCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Watch asset folder for changes
-gulp.task('watch', ['scss'], function () {
+gulp.task('watch', ['scss', 'html'], function () {
   gulp.watch('src/scss/**/*', ['scss']);
+  gulp.watch('src/html/**/*', ['html']);
 });
 
 
@@ -87,4 +102,4 @@ gulp.task('watch', ['scss'], function () {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Set watch as default task
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'webserver']);

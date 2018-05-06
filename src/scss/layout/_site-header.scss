@@ -4,3 +4,17 @@
 //  SITE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
+//
+//  TOP BAR
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-header__top-bar {
+  padding: $gutter * .5;
+}
+
+@include respond-above(sm) {
+  .site-header__top-bar {
+    padding: $gutter;
+  }
+}

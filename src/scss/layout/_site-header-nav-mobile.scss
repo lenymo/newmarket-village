@@ -4,6 +4,97 @@
 //  SITE HEADER NAV MOBILE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
+//
+//  TYPOGRAPHY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$site-header-nav-mobile-font-size: rem(16px);
+$site-header-nav-mobile-font-weight: bold;
+$site-header-nav-mobile-letter-spacing: .05em;
+
+
+//
+//  COLOR
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$site-header-nav-mobile-font-color: $white;
+
+
+//
+//  STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
 @include respond-below(sm) {
-  
+  .site-header-nav {
+    background-color: rgba($black, 0);
+    height: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: background 1s cubic-bezier(.18, 1, .21, 1);
+    width: 100%;
+    z-index: $z-index-mobile-nav;
+  }
+
+  .site-header-nav__wrapper {
+    background-color: rgba($black, .97);
+    box-shadow: 0 0 50px rgba($black, .5);
+    color: $site-header-nav-mobile-font-color;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1s cubic-bezier(.18, 1, .21, 1);
+    transform: translateX(-100%);
+    width: 80%;
+  }
+
+  .site-header-nav__container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+//
+//  TOGGLED
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-below(sm) {
+  body.-menu-is-toggled {
+    .site-header-nav {
+      background-color: rgba($black, .5);
+      height: 100%;
+      height: 100vh;
+    }
+
+    .site-header-nav__wrapper {
+      height: 100vh;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+
+//
+//  LINK
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-below(sm) {
+  .site-header-nav__link {
+    color: $white;
+    display: block;
+    font-size: $site-header-nav-mobile-font-size;
+    font-weight: $site-header-nav-mobile-font-weight;
+    letter-spacing: $site-header-nav-mobile-letter-spacing;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: ($gutter * .5) 0;
+  }
 }

@@ -6,6 +6,6 @@
 
 (function() {
 
-  
+  ToggleMobileMenu.init();
 
 })();

@@ -6,7 +6,7 @@
 
 // General.
 var gulp            = require('gulp');
-// var del             = require('del');
+var del             = require('del');
 var sourcemaps      = require('gulp-sourcemaps');
 
 // Styles.

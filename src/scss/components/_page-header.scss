@@ -1,0 +1,52 @@
+
+
+//
+//  PAGE HEADER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header {
+  padding-top: $gutter * 3;
+  padding-bottom: $gutter * 3;
+  text-align: center;
+}
+
+@include respond-above(xs) {
+  .page-header {
+    padding-top: $gutter * 4;
+    padding-bottom: $gutter * 4;
+  }
+}
+
+@include respond-above(sm) {
+  .page-header {
+    padding-top: $gutter * 5;
+    padding-bottom: $gutter * 5;
+  }
+}
+
+@include respond-above(md) {
+  .page-header {
+    padding-top: $gutter * 6;
+    padding-bottom: $gutter * 6;
+  }
+}
+
+
+//
+//  TITLE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header__title {
+  margin-bottom: 0;
+}
+
+
+//
+//  DARK BG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header {
+  &.-has-dark-bg {
+    background: $color-gray-6;
+  }
+}

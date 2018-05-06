@@ -1,0 +1,115 @@
+
+
+//
+//  SITE HEADER NAV TOGGLE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  VARIABLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Core styles.
+$mobile-nav-toggle-height: 20px;
+$mobile-nav-toggle-padding: 19px 19px 19px 16px;
+$mobile-nav-toggle-bar-height: 4px;
+$mobile-nav-toggle-bar-width: 30px;
+
+// Border.
+$mobile-nav-toggle-border-width: 0;
+$mobile-nav-toggle-border-color: transparent;
+$mobile-nav-toggle-border-radius: 0;
+
+// Default state.
+$mobile-nav-toggle-icon-color: $white;
+$mobile-nav-toggle-background-color: transparent;
+
+// Toggled.
+$mobile-nav-toggle-icon-color-toggled: $mobile-nav-toggle-icon-color;
+$mobile-nav-toggle-background-color-toggled: transparent;
+
+
+//
+//  STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-nav-toggle {
+  background: $mobile-nav-toggle-background-color;
+  display: block;
+  float: right;
+  // margin-right: -$gutter;
+  padding: $mobile-nav-toggle-padding;
+  position: relative;
+  z-index: $z-index-mobile-nav-toggle;
+
+  .site-nav-toggle__wrapper {
+    display: block;
+    height: $mobile-nav-toggle-height;
+    position: relative;
+    width: $mobile-nav-toggle-bar-width;
+  }
+
+  .site-nav-toggle__bar {
+    background: $mobile-nav-toggle-icon-color;
+    height: $mobile-nav-toggle-bar-height;
+    left: 0;
+    position: absolute;
+    transform-origin: 50% 50%;
+    width: 100%;
+
+    @if ($mobile-nav-toggle-border-radius != 0) {
+      border-radius: $mobile-nav-toggle-border-radius;
+    }
+
+    @if ($mobile-nav-toggle-border-width != 0) {
+      border: $mobile-nav-toggle-border-width solid $mobile-nav-toggle-border-color;
+    }
+
+    &.site-nav-toggle__bar--top {
+      top: 0;
+      transition: all .2s ease;
+    }
+
+    &.site-nav-toggle__bar--middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.site-nav-toggle__bar--bottom {
+      bottom: 0;
+      transition: all .2s ease;
+    }
+  }
+}
+
+.site-header {
+  &.-menu-is-toggled {
+    .site-nav-toggle {
+      background: $mobile-nav-toggle-background-color-toggled;
+
+      .site-nav-toggle__bar {
+        background: $mobile-nav-toggle-icon-color-toggled;
+
+        &.site-nav-toggle__bar--top {
+          top: 50%;
+          transform: translateY(-50%) rotateZ(45deg);
+        }
+
+        &.site-nav-toggle__bar--middle {
+          transform: scaleX(.01);
+        }
+
+        &.site-nav-toggle__bar--bottom {
+          top: 50%;
+          transform: translateY(-50%) rotateZ(-45deg);
+        }
+      }
+    }
+  }
+}
+
+@include respond-above(sm) {
+  .site-nav-toggle {
+    display: none;
+  }
+}

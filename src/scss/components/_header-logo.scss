@@ -5,5 +5,17 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .header-logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+}
+
+.header-logo__img {
   display: block;
+}
+
+@include respond-above(sm) {
+  .header-logo {
+    width: 183px;
+  }
 }

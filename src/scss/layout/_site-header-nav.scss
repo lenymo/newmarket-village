@@ -6,11 +6,21 @@
 
 
 //
-//  VARIABLES
+//  PADDING
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$site-header-nav-font-size: rem(12px);
-$site-ehader-nav-font-weight: bold;
+$site-header-nav-padding-md: ($gutter * .75) ($gutter * .25);
+$site-header-nav-padding-lg: ($gutter * .75) ($gutter * .25);
+
+
+//
+//  TYPOGRAPHY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$site-header-nav-font-size-md: rem(9px);
+$site-header-nav-font-size-lg: rem(12px);
+$site-header-nav-font-weight: bold;
+$site-header-nav-letter-spacing: .05em;
 
 
 //
@@ -31,7 +41,6 @@ $site-ehader-nav-font-weight: bold;
 @include respond-above(sm) {
   .site-header-nav__list {
     display: block;
-    text-align: justify;
   }
 }
 
@@ -56,9 +65,10 @@ $site-ehader-nav-font-weight: bold;
   .site-header-nav__link {
     color: $white;
     display: block;
-    font-size: $site-header-nav-font-size;
-    font-weight: $site-ehader-nav-font-weight;
-    padding: ($gutter * .75) ($gutter * .5);
+    font-size: $site-header-nav-font-size-md;
+    font-weight: $site-header-nav-font-weight;
+    letter-spacing: $site-header-nav-letter-spacing;
+    padding: $site-header-nav-padding-md;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -67,6 +77,45 @@ $site-ehader-nav-font-weight: bold;
     &:nth-child(1) {
       .site-header-nav__link {
         padding-left: 0;
+      }
+    }
+
+    &:last-of-type {
+      .site-header-nav__link {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@include respond-above(md) {
+  .site-header-nav__link {
+    font-size: $site-header-nav-font-size-lg;
+    padding: $site-header-nav-padding-lg;
+  }
+}
+
+
+//
+//  DROPDOWN INDICATORS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(md) {
+  .site-header-nav__list-item {
+    &.-has-children {
+      .site-header-nav__link {
+        &:after {
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 4px solid $white;
+          content: '';
+          display: inline-block;
+          height: 0;
+          position: relative;
+          top: 3px;
+          vertical-align: top;
+          width: 0;
+        }
       }
     }
   }

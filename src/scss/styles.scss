@@ -9,25 +9,25 @@
 //  CONFIGURATION & HELPERS
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import './abstracts/variables';
-@import './abstracts/color';
-@import './abstracts/functions';
-@import './abstracts/media-queries';
+@import 'abstracts/variables';
+@import 'abstracts/color';
+@import 'abstracts/functions';
+@import 'abstracts/media-queries';
 
 
 //
 //  VENDOR
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import './vendors/normalize';
+@import 'vendors/normalize';
 
 
 //
 //  BASE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import './base/base';
-@import './base/typography';
+@import 'base/base';
+@import 'base/typography';
 
 
 //
@@ -35,8 +35,8 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // HTML components
-@import './components/media';
-@import './components/button';
+@import 'components/media';
+@import 'components/button';
 
 // Custom components.
 
@@ -46,16 +46,16 @@
 //  LAYOUT
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import './layout/grid';
-@import './layout/site-header';
-@import './layout/section';
+@import 'layout/grid';
+@import 'layout/site-header';
+@import 'layout/section';
 
 
 //
 //  PAGES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import './pages/home';
+@import 'pages/home';
 
 
 

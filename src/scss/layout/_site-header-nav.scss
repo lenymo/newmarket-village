@@ -9,6 +9,9 @@
 //  VARIABLES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+$site-header-nav-font-size: rem(12px);
+$site-ehader-nav-font-weight: bold;
+
 
 //
 //  STYLES
@@ -19,6 +22,19 @@
     background: rgba($black, .75);
   }
 }
+
+
+//
+//  LIST
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header-nav__list {
+    display: block;
+    text-align: justify;
+  }
+}
+
 
 
 //
@@ -36,7 +52,22 @@
 //  LINK
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.site-header-nav__link {
-  color: $white;
-  display: block;
+@include respond-above(sm) {
+  .site-header-nav__link {
+    color: $white;
+    display: block;
+    font-size: $site-header-nav-font-size;
+    font-weight: $site-ehader-nav-font-weight;
+    padding: ($gutter * .75) ($gutter * .5);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .site-header-nav__list-item {
+    &:nth-child(1) {
+      .site-header-nav__link {
+        padding-left: 0;
+      }
+    }
+  }
 }

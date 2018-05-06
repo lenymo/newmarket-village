@@ -10,11 +10,11 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .site-header__top-bar {
-  padding: $gutter * .5;
+  padding: ($gutter * .5) 0;
 }
 
 @include respond-above(sm) {
   .site-header__top-bar {
-    padding: $gutter;
+    padding: $gutter 0;
   }
 }

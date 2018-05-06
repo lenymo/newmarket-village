@@ -18,8 +18,8 @@ var autoprefixer    = require('gulp-autoprefixer');
 var include         = require('gulp-file-include');
 
 // JavaScript.
-// var concat          = require('gulp-concat');
-// var uglify          = require('gulp-uglify');
+var concat          = require('gulp-concat');
+var uglify          = require('gulp-uglify');
 
 // Images.
 // var imagemin        = require('gulp-imagemin');
@@ -59,6 +59,29 @@ gulp.task('scss', function () {
 
 
 //
+//  JAVASCRIPT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+gulp.task('js', function() {
+
+  // Clear the build/js directory.
+  del([
+    'build/js/**/*'
+  ]);
+
+  gulp.src('src/js/*.js')
+
+    // Initialise source maps for dev.
+    .pipe( sourcemaps.init() )
+    .pipe( concat('app.min.js') )
+    .pipe( uglify().on('error', console.log) )
+    .pipe( sourcemaps.write('./') )
+    .pipe( gulp.dest('build/js') );
+
+});
+
+
+//
 //  HTML
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -90,9 +113,10 @@ gulp.task('webserver', function() {
 //  WATCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// Watch asset folder for changes
-gulp.task('watch', ['scss', 'html'], function () {
+// Watch asset folder for changes.
+gulp.task('watch', ['scss', 'js', 'html'], function () {
   gulp.watch('src/scss/**/*', ['scss']);
+  gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/html/**/*', ['html']);
 });
 
@@ -101,5 +125,5 @@ gulp.task('watch', ['scss', 'html'], function () {
 //  DEFAULT
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-// Set watch as default task
+// Set watch as default task.
 gulp.task('default', ['watch', 'webserver']);

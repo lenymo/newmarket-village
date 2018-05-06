@@ -127,15 +127,23 @@ gulp.task('webserver', function() {
 
 
 //
+//  BUILD
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Build all assets.
+gulp.task('build', ['scss', 'js', 'html', 'images']);
+
+
+//
 //  WATCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Watch asset folder for changes.
-gulp.task('watch', ['scss', 'js', 'html'], function () {
+gulp.task('watch', ['scss', 'js', 'html', 'webserver'], function () {
   gulp.watch('src/scss/**/*', ['scss']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/html/**/*', ['html']);
-  gulp.watch('src/img/**/*', ['img']);
+  // gulp.watch('src/img/**/*', ['img']);
 });
 
 
@@ -144,4 +152,4 @@ gulp.task('watch', ['scss', 'js', 'html'], function () {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Set watch as default task.
-gulp.task('default', ['watch', 'webserver']);
+gulp.task('default', ['watch']);

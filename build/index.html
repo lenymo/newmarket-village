@@ -12,6 +12,7 @@
 
 </head>
 <body class="page-home">
+  <div class="site-content" id="top">
 
 <header class="site-header">
   <div class="container container--site-header">
@@ -27,6 +28,16 @@
     <button class="header-search__btn">Go</button>
   </form>
 </div>
+
+        <div class="header-hours">
+  <div class="header-hours__today">
+    Today’s General Trading Hours: <strong>9:00am - 5:30pm</strong>
+  </div>
+  <a href="" class="btn header-hours__btn">
+    <span class="desktop-only">View All</span> Trading Hours
+  </a>
+</div>
+        
       </div>
     </div><!-- .row -->
   </div><!-- .container -->
@@ -189,7 +200,7 @@
 </a>
 </header><!-- .site-header -->
 
-<main class="main">
+<main class="main" id="main">
 
 <header class="page-header -has-dark-bg">
   <h1 class="page-header__title">
@@ -200,10 +211,10 @@
   </p>
 </header>
 
-</main>
+  </main>
 
-<footer class="site-footer">
-  <section class="section section--footer-signup">
+  <footer class="site-footer">
+    <section class="section section--footer-signup">
   <div class="container container--footer-signup">
     <div class="row row--footer-signup">
       <div class="col-sm-12 col--footer-signup">
@@ -217,7 +228,7 @@
     </div><!-- .row -->
   </div><!-- .container -->
 </section><!-- .section -->
-  <section class="section section--footer-social">
+    <section class="section section--footer-social">
   <div class="container container--footer-social">
     <div class="row row--footer-social">
       <div class="col-sm-12 col--footer-social">
@@ -228,18 +239,45 @@
     </div><!-- .row -->
   </div><!-- .container -->
 </section><!-- .section -->
+    <div class="footer-bottom">
   <section class="section section--footer-bottom">
-  <div class="container container--footer-bottom">
-    <div class="row row--footer-bottom">
-      <div class="col-sm-12 col--footer-bottom">
-        ...
-      </div>
-    </div><!-- .row -->
-  </div><!-- .container -->
-</section><!-- .section -->
-</footer>
+    <div class="container container--footer-bottom">
+      <div class="row row--footer-bottom">
+        <div class="col-sm-4 col--footer-bottom">
+          <div class="footer-bottom__scroll-to-top">
+            <div class="footer-bottom__scroll-to-top__icon">
+              
+            </div>
+            <p class="footer-bottom__scroll-to-top__text">
+              <a href="#main" class="scroll-to-top">Back to top</a>
+            </p>
+          </div>
+        </div><!-- .col -->
+
+        <div class="col-sm-4 col--footer-bottom">
+          <div class="footer-bottom__copyright">
+            <p class="footer-bottom__copyright__text">
+              2018 &copy; Reading Property <span class="footer-bottom__copyright__sep">|</span> <a href="" class="footer-bottom__copyright__link">Privacy Policy</a>
+            </p>
+          </div>
+        </div><!-- .col -->
+
+        <div class="col-sm-4 col--footer-bottom">
+          <div class="footer-bottom__site-by">
+            <p>
+              Website by ID
+            </p>
+          </div>
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section><!-- .section -->
+</div><!-- .footer-bottom -->
+  </footer>
+  
+</div><!-- .site-content -->
 
 <script type="text/javascript" src="js/app.min.js""></script>
-
+  
 </body>
 </html>

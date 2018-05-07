@@ -6,4 +6,38 @@
 
 .section--footer-bottom {
   border-top: 1px solid $color-gray-c;
+  font-size: rem(14px);
+}
+
+
+//
+//  SCROLL TO TOP
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.footer-bottom__scroll-to-top {
+  
+}
+
+
+//
+//  COPYRIGHT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .footer-bottom__copyright {
+    color: #ccc;
+    text-align: center;
+  }
+}
+
+
+//
+//  SITE BY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .footer-bottom__site-by {
+    color: #ccc;
+    text-align: right;
+  }
 }

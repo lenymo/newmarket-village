@@ -34,22 +34,6 @@
 
 
 //
-//  COMPONENTS
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// HTML components
-@import 'components/media';
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/nav';
-
-// Custom components.
-@import 'components/header-logo';
-@import 'components/page-header';
-@import 'components/page-header-fixed';
-
-
-//
 //  LAYOUT
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -66,6 +50,22 @@
 @import 'layout/footer-social';
 @import 'layout/footer-bottom';
 @import 'layout/section';
+
+
+//
+//  COMPONENTS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// HTML components
+@import 'components/media';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/nav';
+
+// Custom components.
+@import 'components/header-logo';
+@import 'components/page-header';
+@import 'components/page-header-fixed';
 
 
 //

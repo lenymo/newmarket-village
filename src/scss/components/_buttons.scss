@@ -10,15 +10,18 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Colors.
-$btn-bg-color: $color-primary;
-$btn-bg-color-hover: lighten($btn-bg-color, 7.5%);
+$btn-bg-color: transparent;
+$btn-bg-color-hover: $black;
+
 $btn-font-color: $black;
+$btn-font-color-hover: $white;
 
 // Border.
 $btn-border-width: 2px;
 $btn-border-color: $black;
 
 // Typography.
+$btn-font-size: rem(14px);
 $btn-font-weight: bold;
 $btn-letter-spacing: .05em;
 
@@ -30,13 +33,15 @@ $btn-letter-spacing: .05em;
 .btn {
   background: $btn-bg-color;
   border: $btn-border-width solid $btn-border-color;
-  border-radius: 3px;
+  border-radius: 0;
   color: $btn-font-color;
   cursor: pointer;
   display: inline-block;
+  font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   letter-spacing: $btn-letter-spacing;
-  padding: ($gutter * .5) $gutter;
+  padding: ($gutter * .5) ($gutter * .75);
+  text-decoration: none;
   transition: all .2s ease;
 
   &:hover,
@@ -46,10 +51,18 @@ $btn-letter-spacing: .05em;
   }
 
   &:hover {
-    background: $btn-bg-color-hover;
   }
 
   &:focus {
     outline: 0;
+  }
+}
+
+@include respond-above(sm) {
+  .btn {
+    &:hover {
+      background: $btn-bg-color-hover;
+      color: $btn-font-color-hover;
+    }
   }
 }

@@ -55,7 +55,6 @@ gulp.task('scss', function () {
     }))
     .pipe( sourcemaps.write() )
     .pipe( gulp.dest('build/css') );
-    // .pipe(livereload());
 });
 
 
@@ -95,7 +94,6 @@ gulp.task('html', function() {
       basepath: '@file'
     }))
     .pipe( gulp.dest('build/') );
-    // .pipe(livereload());
 });
 
 

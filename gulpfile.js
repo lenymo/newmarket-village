@@ -33,14 +33,14 @@ var mozjpeg         = require('imagemin-mozjpeg');
 // Compile admin SCSS files to CSS
 gulp.task('scss', function () {
 
-  // Clear the static/css directory.
+  // Clear the build/css directory.
   del(['build/css/**/*']);
 
   gulp.src('src/scss/**/*.scss')
 
     .pipe( sourcemaps.init() )
     .pipe( sass().on('error', sass.logError) )
-    .pipe( sass({outputStyle : 'compressed'}) )
+    .pipe( sass({outputStyle: 'compressed'}) )
     .pipe( sourcemaps.write({includeContent: false}) )
     .pipe( sourcemaps.init({loadMaps: true}) )
     .pipe( autoprefixer({
@@ -102,7 +102,7 @@ gulp.task('html', function() {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 gulp.task('images', function() {
-  gulp.src('src/img/**/*.{jpg,png,gif}')
+  gulp.src('src/img/**/*.{jpg,png,gif,svg}')
     .pipe(imagemin([
       imagemin.gifsicle(),
       imagemin.optipng(),
@@ -121,7 +121,7 @@ gulp.task('webserver', function() {
   gulp.src('build/')
     .pipe(webserver({
       livereload: true,
-      open: true
+      // open: true
     }));
 });
 

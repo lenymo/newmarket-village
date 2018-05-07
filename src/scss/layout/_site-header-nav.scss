@@ -11,6 +11,7 @@
 
 $site-header-nav-padding-md: ($gutter * .75) ($gutter * .25);
 $site-header-nav-padding-lg: ($gutter * .75) ($gutter * .25);
+$site-header-nav-padding-xl: ($gutter * .75) ($gutter);
 
 
 //
@@ -94,6 +95,12 @@ $site-header-nav-letter-spacing: .05em;
   .site-header-nav__link {
     font-size: $site-header-nav-font-size-lg;
     padding: $site-header-nav-padding-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .site-header-nav__link {
+    padding: $site-header-nav-padding-xl;
   }
 }
 

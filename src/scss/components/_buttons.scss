@@ -40,6 +40,7 @@ $btn-letter-spacing: .05em;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
   letter-spacing: $btn-letter-spacing;
+  line-height: 1;
   padding: ($gutter * .5) ($gutter * .75);
   text-decoration: none;
   transition: all .2s ease;

@@ -17,7 +17,31 @@ $base-font-color: $color-gray-3;
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $base-font-family: 'Montserrat', 'helvetica', 'arial', sans-serif;
+$base-line-height: 1.5;
+$base-letter-spacing: .05em;
+$base-margin-bottom-xs: $base-font-size * $base-line-height;
+$base-margin-bottom-sm: $base-font-size * ($base-line-height * 1.5);
 $heading-font-family: $base-font-family;
+
+
+//
+//  HEADING SIZES, WEIGHTS, ETC
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$heading-font-weight: normal;
+
+$h1-font-size-xs: rem(32px);
+$h1-font-size-sm: rem(48px);
+$h1-font-size-md: rem(60px);
+
+$h2-font-size-xs: rem(24px);
+$h2-font-size-sm: rem(30px);
+$h2-font-size-md: rem(36px);
+
+$h3-font-size-xs: rem(21px);
+$h3-font-size-sm: rem(24px);
+$h3-font-size-md: rem(30px);
+
 
 
 //
@@ -30,6 +54,8 @@ html {
 
 body {
   font-family: $base-font-family;
+  letter-spacing: $base-letter-spacing;
+  line-height: $base-line-height;
 }
 
 
@@ -44,7 +70,75 @@ h4,
 h5, 
 h6 {
   color: $base-font-color;
+  font-weight: $heading-font-weight;
   line-height: 1.5;
+  letter-spacing: .05em;
   margin: 0;
-  margin-bottom: $gutter;
+  margin-bottom: $base-margin-bottom-xs;
+
+  @include respond-above(xs) {
+    margin-bottom: $base-margin-bottom-sm;
+  }
+}
+
+h1 {
+  font-size: $h1-font-size-xs;
+}
+
+@include respond-above(xs) {
+  h1 {
+    font-size: $h1-font-size-sm;
+  }
+}
+
+@include respond-above(sm) {
+  h1 {
+    font-size: $h1-font-size-md;
+  }
+}
+
+h2 {
+  font-size: $h2-font-size-xs;
+}
+
+@include respond-above(xs) {
+  h2 {
+    font-size: $h2-font-size-sm;
+  }
+}
+
+@include respond-above(sm) {
+  h2 {
+    font-size: $h2-font-size-md;
+  }
+}
+
+h3 {
+  font-size: $h3-font-size-xs;
+}
+
+@include respond-above(xs) {
+  h3 {
+    font-size: $h3-font-size-sm;
+  }
+}
+
+@include respond-above(sm) {
+  h3 {
+    font-size: $h3-font-size-md;
+  }
+}
+
+
+//
+//  GENERAL TYPOGRAPHY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+p {
+  margin: 0;
+  margin-bottom: $base-margin-bottom-xs;
+
+  @include respond-above(xs) {
+    margin-bottom: $base-margin-bottom-sm;
+  }
 }

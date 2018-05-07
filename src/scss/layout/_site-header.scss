@@ -4,6 +4,11 @@
 //  SITE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.site-header {
+  background-color: $white;
+  width: 100%;
+}
+
 @include respond-below(sm) {
   .container--site-header {
     position: static;

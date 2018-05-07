@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 </head>
-<body class="page-home">
-  <div class="site-content" id="top">
+<body class="page-home" id="top">
+  <div class="site-content">
 
 <header class="site-header">
   <div class="container container--site-header">
@@ -200,16 +200,22 @@
 </a>
 </header><!-- .site-header -->
 
-<main class="main" id="main">
-
 <header class="page-header -has-dark-bg">
-  <h1 class="page-header__title">
-    Good Morning
-  </h1>
-  <p class="page-header__sub-title">
-    Welcome to Auburn Redyard
-  </p>
-</header>
+  <div class="container page-header__container">
+    <div class="row page-header__row">
+      <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 page-header__col">
+        <h1 class="page-header__title">
+          Good Morning
+        </h1>
+        <p class="page-header__sub-title">
+          Welcome to Auburn Redyard
+        </p>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+</header><!-- .page-header -->
+
+<main class="main" id="main">
 
   </main>
 
@@ -277,8 +283,8 @@
 
 </div><!-- .site-content -->
 
-<script type="text/javascript" src="js/app.min.js"></script>
 <script type="text/javascript" src="js/vendor/smooth-scroll.min.js"></script>
+<script type="text/javascript" src="js/app.min.js"></script>
   
 </body>
 </html>

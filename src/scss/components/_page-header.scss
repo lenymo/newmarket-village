@@ -4,30 +4,47 @@
 //  PAGE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+$page-header-padding-xs: ($gutter * 3) 0;
+$page-header-padding-sm: ($gutter * 4) 0;
+$page-header-padding-md: ($gutter * 11) 0 ($gutter * 6);
+$page-header-padding-lg: ($gutter * 12) 0 ($gutter * 6);
+$page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
+
+
+//
+//  STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 .page-header {
-  padding-top: $gutter * 3;
-  padding-bottom: $gutter * 3;
+  background-image: url('/img/home-hero-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $page-header-padding-xs;
   text-align: center;
 }
 
 @include respond-above(xs) {
   .page-header {
-    padding-top: $gutter * 4;
-    padding-bottom: $gutter * 4;
+    padding: $page-header-padding-sm;
   }
 }
 
 @include respond-above(sm) {
   .page-header {
-    padding-top: $gutter * 5;
-    padding-bottom: $gutter * 5;
+    padding: $page-header-padding-md;
   }
 }
 
 @include respond-above(md) {
   .page-header {
-    padding-top: $gutter * 6;
-    padding-bottom: $gutter * 6;
+    padding: $page-header-padding-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .page-header {
+    padding: $page-header-padding-xl;
   }
 }
 
@@ -40,14 +57,33 @@
   margin-bottom: 0;
 }
 
+@include respond-above(md) {
+  .page-header__title {
+    font-size: rem(96px);
+  }
+}
+
 
 //
 //  SUB-TITLE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .page-header__sub-title {
+  font-size: rem(21px);
   margin-bottom: 0;
   margin-top: $gutter;
+}
+
+@include respond-above(sm) {
+  .page-header__sub-title {
+    font-size: rem(24px);
+  }
+}
+
+@include respond-above(md) {
+  .page-header__sub-title {
+    font-size: rem(36px);
+  }
 }
 
 
@@ -58,6 +94,6 @@
 
 .page-header {
   &.-has-dark-bg {
-    background: $color-gray-6;
+    background-color: $color-gray-6;
   }
 }

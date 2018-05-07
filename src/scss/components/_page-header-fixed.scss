@@ -1,0 +1,87 @@
+
+
+//
+//  PAGE HEADER FIXED
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$page-header-fixed-height-md: 500px;
+$page-header-fixed-height-lg: 600px;
+$page-header-fixed-height-xl: 700px;
+
+
+//
+//  PAGE HEADER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .page-header {
+    height: $page-header-fixed-height-md;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-page-header;
+  }
+}
+
+@include respond-above(md) {
+  .page-header {
+    height: $page-header-fixed-height-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .page-header {
+    height: $page-header-fixed-height-xl;
+  }
+}
+
+
+//
+//  SITE HEADER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: $z-index-site-header;
+  }
+}
+
+
+//
+//  MAIN CONTENT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .main {
+    background-color: $white;
+    margin-top: $page-header-fixed-height-md;
+    position: relative;
+    z-index: $z-index-site-content;
+  }
+}
+
+@include respond-above(md) {
+  .main {
+    margin-top: $page-header-fixed-height-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .main {
+    margin-top: $page-header-fixed-height-xl;
+  }
+}
+
+
+//
+//  FOOTER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-footer {
+  background-color: $white;
+  position: relative;
+  z-index: $z-index-site-footer;
+}

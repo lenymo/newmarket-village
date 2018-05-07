@@ -4,6 +4,11 @@
 //  Z-INDEX
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+$z-index-page-header: 1;
+$z-index-site-header: 2;
+$z-index-site-content: 2;
+$z-index-site-footer: 2;
+
 $z-index-header-search-input: 90;
 $z-index-header-search-btn: 89;
 $z-index-header-search-btn-focus: 91;

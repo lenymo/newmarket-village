@@ -4,3 +4,85 @@
 //  SITE HEADER - SEARCH
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.header-search {
+  display: none;
+  float: right;
+}
+
+@include respond-above(sm) {
+  .header-search {
+    display: block;
+  }
+}
+
+
+//
+//  FORM
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.header-search__form {
+  position: relative;
+}
+
+
+//
+//  INPUT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.header-search__input {
+  background: transparent;
+  border: 0;
+  border-radius: 500px;
+  cursor: pointer;
+  color: transparent;
+  height: 45px;
+  position: relative;
+  transition: all .1s ease-in-out;
+  text-indent: -10000px;
+  width: 45px;
+  z-index: $z-index-header-search-input;
+
+  &:focus {
+    box-shadow: 0 5px 30px rgba($black, .2);
+    cursor: text;
+    color: $black;
+    outline: none;
+    padding-left: $gutter;
+    padding-right: $gutter * 2.5;
+    text-indent: 0;
+    width: 200px;
+  }
+}
+
+
+
+//
+//  BUTTON
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.header-search__btn {
+  background-color: transparent;
+  background-image: url('/img/icon-search.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: 0;
+  color: $black;
+  cursor: pointer;
+  display: block;
+  height: 45px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-indent: -10000px;
+  top: 0;
+  width: 45px;
+  z-index: $z-index-header-search-btn;
+}
+
+.header-search__input {
+  &:focus {
+    &+.header-search__btn {
+      z-index: $z-index-header-search-btn-focus;
+    }
+  }
+}

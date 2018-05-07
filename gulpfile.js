@@ -71,13 +71,15 @@ gulp.task('js', function() {
   ]);
 
   gulp.src('src/js/*.js')
-
-    // Initialise source maps for dev.
     .pipe( sourcemaps.init() )
     .pipe( concat('app.min.js') )
     .pipe( uglify().on('error', console.log) )
     .pipe( sourcemaps.write('./') )
     .pipe( gulp.dest('build/js') );
+
+
+  gulp.src('src/js/vendor/*.js')
+    .pipe( gulp.dest('build/js/vendor') );
 
 });
 

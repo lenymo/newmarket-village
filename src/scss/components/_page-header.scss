@@ -21,6 +21,7 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
   background-repeat: no-repeat;
   background-size: cover;
   padding: $page-header-padding-xs;
+  position: relative;
   text-align: center;
 }
 
@@ -79,6 +80,16 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 
 
 //
+//  ICON
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header__icon {
+  
+}
+
+
+
+//
 //  SUB-TITLE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -106,18 +117,22 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .page-header__scroll-prompt {
-  bottom: -$gutter;
+  bottom: $gutter * .5;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-  width: 30px;
+  width: 24px;
 }
 
 @include respond-above(sm) {
   .page-header__scroll-prompt {
-    bottom: -($gutter * 3);
-    width: 45px;
+    bottom: $gutter * 2;
+    width: 36px;
   }
+}
+
+.page-header__scroll-prompt__svg {
+  fill: $white;
 }
 
 

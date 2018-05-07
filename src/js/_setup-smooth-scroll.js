@@ -4,6 +4,9 @@
 //  SMOOTH SCROLL
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Uses smooth scroll.
+// http://github.com/cferdinandi/smooth-scroll
+
 var SetupSmoothScroll = (function() {  
 
 

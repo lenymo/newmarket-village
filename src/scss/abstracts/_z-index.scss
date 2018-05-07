@@ -4,10 +4,10 @@
 //  Z-INDEX
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$z-index-page-header: 1;
-$z-index-site-header: 2;
-$z-index-site-content: 2;
-$z-index-site-footer: 2;
+$z-index-page-header: 0;
+$z-index-site-header: 10;
+$z-index-site-content: 10;
+$z-index-site-footer: 10;
 
 $z-index-header-search-input: 90;
 $z-index-header-search-btn: 89;

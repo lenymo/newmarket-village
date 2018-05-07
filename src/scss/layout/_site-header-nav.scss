@@ -30,6 +30,8 @@ $site-header-nav-letter-spacing: .05em;
 @include respond-above(sm) {
   .site-header-nav {
     background: rgba($black, .75);
+    position: absolute;
+    width: 100%;
   }
 }
 

@@ -1,0 +1,91 @@
+
+
+//
+//  SITE NAV DROPDOWNS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  TYPOGRAPHY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$site-header-dropdown-font-size-md: $site-header-nav-font-size-md;
+$site-header-dropdown-font-size-lg: $site-header-nav-font-size-lg;
+
+
+
+//
+//  LIST
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+.site-header-nav__child-list {
+  display: none;
+}
+
+@include respond-above(sm) {
+  .site-header-nav__child-list {
+    background: rgba($black, 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: all .1s ease;
+  }
+
+  .site-header-nav__list-item {
+    &:hover {
+      .site-header-nav__child-list {
+        background: rgba($black, .95);
+        height: auto;
+        padding-bottom: $gutter * .5;
+        padding-top: $gutter * .5;
+      }
+    }
+  }
+}
+
+
+//
+//  LIST ITEM
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header-nav__child-list__item {
+    
+  }
+}
+
+
+//
+//  LINK
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(sm) {
+  .site-header-nav__child-list__link {
+    color: $white;
+    display: block;
+    font-size: $site-header-dropdown-font-size-md;
+    padding: ($gutter * .5) $gutter;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+  }
+}
+
+@include respond-above(md) {
+  .site-header-nav__child-list__link {
+    font-size: $site-header-dropdown-font-size-lg;
+  }
+}

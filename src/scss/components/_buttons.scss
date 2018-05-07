@@ -1,0 +1,55 @@
+
+
+//
+//  BUTTON
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  VARIABLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Colors.
+$btn-bg-color: $color-primary;
+$btn-bg-color-hover: lighten($btn-bg-color, 7.5%);
+$btn-font-color: $black;
+
+// Border.
+$btn-border-width: 2px;
+$btn-border-color: $black;
+
+// Typography.
+$btn-font-weight: bold;
+$btn-letter-spacing: .05em;
+
+
+//
+//  STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.btn {
+  background: $btn-bg-color;
+  border: $btn-border-width solid $btn-border-color;
+  border-radius: 3px;
+  color: $btn-font-color;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  letter-spacing: $btn-letter-spacing;
+  padding: ($gutter * .5) $gutter;
+  transition: all .2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $btn-bg-color-hover;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

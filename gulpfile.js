@@ -121,7 +121,7 @@ gulp.task('webserver', function() {
   gulp.src('build/')
     .pipe(webserver({
       livereload: true,
-      // open: true
+      open: true
     }));
 });
 

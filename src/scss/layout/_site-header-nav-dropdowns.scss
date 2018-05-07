@@ -26,6 +26,7 @@ $site-header-dropdown-font-size-lg: $site-header-nav-font-size-lg;
 @include respond-above(sm) {
   .site-header-nav__child-list {
     background: rgba($black, 0);
+    box-shadow: 0 5px 30px rgba($black, .1);
     display: block;
     height: 0;
     overflow: hidden;

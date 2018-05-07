@@ -35,7 +35,11 @@ var ToggleMobileMenu = (function() {
         
         // If the menu open class is on the body.
         if ( bodyElemClasses[i] == siteNavOpenClass ) {
+          
+          // Set nav flag to open.
           siteNavOpenFlag = true;
+
+          // Break out of the loop.
           break;
         }
       }

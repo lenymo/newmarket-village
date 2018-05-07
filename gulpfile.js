@@ -41,7 +41,7 @@ gulp.task('scss', function () {
     .pipe( sourcemaps.init() )
     .pipe( sass().on('error', sass.logError) )
     .pipe( sass({outputStyle: 'compressed'}) )
-    .pipe( sourcemaps.write({includeContent: false}) )
+    .pipe( sourcemaps.write() )
     .pipe( sourcemaps.init({loadMaps: true}) )
     .pipe( autoprefixer({
       browsers: [

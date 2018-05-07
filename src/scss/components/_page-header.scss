@@ -50,6 +50,20 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 
 
 //
+//  LAYOUT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header__container {
+  position: static;
+}
+
+.page-header__col {
+  position: static;
+}
+
+
+
+//
 //  TITLE
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -83,6 +97,26 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 @include respond-above(md) {
   .page-header__sub-title {
     font-size: rem(36px);
+  }
+}
+
+
+//
+//  SCROLL PROMPT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.page-header__scroll-prompt {
+  bottom: -$gutter;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 30px;
+}
+
+@include respond-above(sm) {
+  .page-header__scroll-prompt {
+    bottom: -($gutter * 3);
+    width: 45px;
   }
 }
 

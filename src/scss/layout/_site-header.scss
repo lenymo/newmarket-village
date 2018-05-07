@@ -4,6 +4,16 @@
 //  SITE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+@include respond-below(sm) {
+  .container--site-header {
+    position: static;
+  }
+
+  .site-header__top-bar__col {
+    position: static;
+  }
+}
+
 
 //
 //  TOP BAR

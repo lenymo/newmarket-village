@@ -4,8 +4,8 @@
 //  PAGE HEADER
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$page-header-padding-xs: ($gutter * 3) 0;
-$page-header-padding-sm: ($gutter * 4) 0;
+$page-header-padding-xs: ($gutter * 4) 0;
+$page-header-padding-sm: ($gutter * 5) 0;
 $page-header-padding-md: ($gutter * 11) 0 ($gutter * 6);
 $page-header-padding-lg: ($gutter * 12) 0 ($gutter * 6);
 $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
@@ -96,7 +96,7 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 .page-header__sub-title {
   font-size: rem(21px);
   margin-bottom: 0;
-  margin-top: $gutter;
+  // margin-top: $gutter;
 }
 
 @include respond-above(sm) {

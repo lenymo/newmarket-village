@@ -31,24 +31,25 @@
 
 .header-search__input {
   background: transparent;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 500px;
-  cursor: pointer;
   color: transparent;
+  cursor: pointer;
   height: 45px;
   position: relative;
-  transition: all .1s ease-in-out;
   text-indent: -10000px;
+  // transition: all .05s ease-in-out;
   width: 45px;
   z-index: $z-index-header-search-input;
 
   &:focus {
     box-shadow: 0 5px 30px rgba($black, .2);
-    cursor: text;
+    border: 1px solid $color-gray-e;
     color: $black;
+    cursor: text;
     outline: none;
     padding-left: $gutter;
-    padding-right: $gutter * 2.5;
+    padding-right: $gutter * 2.25;
     text-indent: 0;
     width: 200px;
   }
@@ -72,17 +73,25 @@
   height: 45px;
   padding: 0;
   position: absolute;
-  right: 0;
+  right: 2px;
   text-indent: -10000px;
+  transform: scale(.9);
+  transition: all .2s ease;
   top: 0;
   width: 45px;
   z-index: $z-index-header-search-btn;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
-.header-search__input {
-  &:focus {
-    &+.header-search__btn {
-      z-index: $z-index-header-search-btn-focus;
+body.-search-is-open {
+  .header-search__btn {
+    z-index: $z-index-header-search-btn-focus;
+
+    &:hover {
+      transform: scale(1);
     }
   }
 }

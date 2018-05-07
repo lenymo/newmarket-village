@@ -8,5 +8,6 @@
 
   ToggleMobileMenu.init();
   ToggleHeaderSearch.init();
+  SetupSmoothScroll.init();
 
 })();

@@ -29,6 +29,7 @@
 
 @import 'base/base';
 @import 'base/typography';
+@import 'base/helpers';
 @import 'base/dark-bg';
 
 
@@ -57,6 +58,7 @@
 @import 'layout/site-header-nav-dropdowns';
 @import 'layout/site-header-nav-mobile';
 @import 'layout/site-header-nav-toggle';
+@import 'layout/site-header-hours';
 @import 'layout/site-header-search';
 @import 'layout/footer';
 @import 'layout/footer-signup';

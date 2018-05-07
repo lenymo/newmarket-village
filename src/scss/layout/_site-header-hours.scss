@@ -1,0 +1,87 @@
+
+
+//
+//  SITE HEADER HOURS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-below(sm) {
+  .header-hours {
+    position: absolute;
+    right: 40px;
+    top: -2px;
+  }
+}
+
+@include respond-above(sm) {
+  .header-hours {
+    float: right;
+    margin-right: $gutter;
+    margin-top: $gutter * .2;
+    padding-right: $gutter;
+    position: relative;
+
+    &:after {
+      background: $color-gray-c;
+      content: '';
+      display: block;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 1px;
+    }
+  }
+}
+
+
+//
+//  TODAY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.header-hours__today {
+  color: $color-gray-6;
+  font-size: rem(14px);
+  letter-spacing: .05em;
+  display: none;
+
+  strong {
+    color: $black;
+  }
+}
+
+@include respond-above(md) {
+  .header-hours__today {
+    display: inline-block;
+    margin-right: $gutter * .5;
+    transition: all .2s ease;
+  }
+
+  body.-search-is-open {
+    .header-hours__today {
+      height: 1px;
+      opacity: 0;
+      overflow: hidden;
+      transform: scale(0);
+      width: 1px;
+    }
+  }
+}
+
+@include respond-above(lg) {
+  .header-hours__today {
+    font-size: rem(16px);
+  }
+}
+
+
+//
+//  BUTTON
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-below(sm) {
+  .header-hours__btn {
+    .desktop-only {
+      display: none;
+    }
+  }
+}

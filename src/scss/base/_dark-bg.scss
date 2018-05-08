@@ -25,5 +25,14 @@ $dark-bg-font-color: $white;
   ul,
   ol, {
     color: $dark-bg-font-color;
+
+    a {
+      color: $dark-bg-font-color;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

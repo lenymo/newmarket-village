@@ -11,6 +11,9 @@
 
 $base-font-color: $color-gray-3;
 
+$link-font-color: $black;
+$link-font-color-hover: lighten($link-font-color, 10%);
+
 
 //
 //  FONT FAMILIES
@@ -42,6 +45,13 @@ $h3-font-size-xs: rem(21px);
 $h3-font-size-sm: rem(24px);
 $h3-font-size-md: rem(30px);
 
+
+//
+//  GENERAL SIZES, WEIGHTS, ETC
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$lead-font-size-sm: rem(21px);
+$lead-font-size: rem(24px);
 
 
 //
@@ -131,6 +141,34 @@ h3 {
 
 
 //
+//  LINKS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+a {
+  color: $link-font-color;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Hover.
+@include respond-above(sm) {
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-font-color-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+//
 //  GENERAL TYPOGRAPHY
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -140,5 +178,17 @@ p {
 
   @include respond-above(xs) {
     margin-bottom: $base-margin-bottom-sm;
+  }
+
+  &.lead {
+    font-size: $lead-font-size-sm;
+  }
+}
+
+@include respond-above(sm) {
+  p {
+    &.lead {
+      font-size: $lead-font-size;
+    }
   }
 }

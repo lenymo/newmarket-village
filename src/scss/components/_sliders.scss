@@ -43,7 +43,13 @@ $slider-controls-svg-margin-top-sm: ($slider-controls-btn-size-sm - $slider-cont
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: $slider-height-xs;
+  opacity: .4;
   position: relative;
+  transition: all .8s ease;
+
+  &.tns-slide-active {
+    opacity: 1;
+  }
 }
 
 @include respond-above(xs) {
@@ -76,17 +82,28 @@ $slider-controls-svg-margin-top-sm: ($slider-controls-btn-size-sm - $slider-cont
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .tiny-slider__slide__content {
-  opacity: .4;
-  transition: all .8s ease;
+  padding: $gutter;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
-.tiny-slider__slide {
-  &.tns-slide-active {
-    .tiny-slider__slide__content {
-      opacity: 1;
-    }
-  }
+
+//
+//  OVERLAY
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__slide__overlay {
+  background: rgba($black, .2);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
+
 
 
 

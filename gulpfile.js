@@ -40,8 +40,8 @@ gulp.task('scss', function () {
     .pipe( sourcemaps.init() )
     .pipe( sass().on('error', sass.logError) )
     .pipe( sass({outputStyle: 'compressed'}) )
-    .pipe( sourcemaps.write() )
-    .pipe( sourcemaps.init({loadMaps: true}) )
+    // .pipe( sourcemaps.write() )
+    // .pipe( sourcemaps.init({loadMaps: true}) )
     .pipe( autoprefixer({
       browsers: [
         'last 5 version',
@@ -52,7 +52,7 @@ gulp.task('scss', function () {
         'android >=2.1'
       ],
     }))
-    .pipe( sourcemaps.write() )
+    .pipe( sourcemaps.write('.') )
     .pipe( gulp.dest('build/css') );
 });
 

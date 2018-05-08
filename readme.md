@@ -13,7 +13,7 @@ Gulp.js for task management including:
 - SCSS (autoprefixer)
 - JavaScript
 - Images (imagemin)
-- HTML includes ([gulp-file-include](https://www.npmjs.com/package/gulp-file-include))
+- File includes ([gulp-file-include](https://www.npmjs.com/package/gulp-file-include))
 - Web server ([gulp-web-server](https://github.com/schickling/gulp-webserver))
 
 JavaScript libraries:

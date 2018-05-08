@@ -7,7 +7,23 @@
 // Uses smooth scroll.
 // https://github.com/ganlanyuan/tiny-slider
 
-var SetupSliders = (function() {  
+var SetupSliders = (function() {
+
+
+  //
+  //  CONFIG
+  //––––––––––––––––––––––––––––––––––––––––––––––––––
+  
+  var config = {
+    slider: {
+      container: '.tiny-slider',
+      items: 1,
+      slideBy: 'page',
+      mouseDrag: true,
+      edgePadding: 30,
+      nav: false
+    }
+  };
 
 
   //
@@ -17,13 +33,7 @@ var SetupSliders = (function() {
   function setupSliders() {
 
     // Smoothly scroll to all anchors.
-    var slider = tns({
-      container: '.tiny-slider',
-      items: 1,
-      slideBy: 'page',
-      mouseDrag: true,
-      edgePadding: 30,
-    });
+    var slider = tns( config.slider );
   }  
 
 

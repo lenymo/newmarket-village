@@ -50,6 +50,7 @@ var SetupSliders = (function() {
           mouseDrag: true,
           edgePadding: 30,
           nav: false,
+          speed: 600,
           responsive: {
             992: {
               edgePadding: 60

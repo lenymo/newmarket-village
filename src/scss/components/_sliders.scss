@@ -45,7 +45,7 @@ $slider-controls-svg-margin-top-sm: ($slider-controls-btn-size-sm - $slider-cont
   height: $slider-height-xs;
   opacity: .4;
   position: relative;
-  transition: all .8s ease;
+  transition: all 1.2s ease;
 
   &.tns-slide-active {
     opacity: 1;

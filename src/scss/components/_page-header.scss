@@ -83,9 +83,9 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 //  ICON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.page-header__icon {
+// .page-header__icon {
   
-}
+// }
 
 
 
@@ -143,6 +143,6 @@ $page-header-padding-xl: ($gutter * 14) 0 ($gutter * 6);
 
 .page-header {
   &.-has-dark-bg {
-    background-color: $color-gray-6;
+    background-color: $dark-bg-bg-color;
   }
 }

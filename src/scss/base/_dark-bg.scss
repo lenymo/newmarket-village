@@ -4,6 +4,13 @@
 //  DARK BG
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+$dark-bg-bg-color: #666;
+$dark-bg-font-color: $white;
+
+//
+//  SYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 .-has-dark-bg {
   h1,
   h2,
@@ -11,10 +18,12 @@
   h4,
   h5,
   h6 {
-    color: $white;
+    color: $dark-bg-font-color;
   }
 
-  p {
-    color: $white;
+  p,
+  ul,
+  ol, {
+    color: $dark-bg-font-color;
   }
 }

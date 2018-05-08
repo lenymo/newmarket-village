@@ -43,3 +43,23 @@ $section-padding-lg: $section-padding-lg-top-bottom 0;
     padding: $section-padding-lg;
   }
 }
+
+
+//
+//  SECTION TITLE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.section__title {
+  text-align: center;
+}
+
+
+//
+//  DARK BG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.section {
+  &.-has-dark-bg {
+    background-color: $dark-bg-bg-color;
+  }
+}

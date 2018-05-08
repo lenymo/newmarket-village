@@ -6,11 +6,22 @@ A code test I completed for a job application in May 2018.
 
 ## How to use this
 
-This project is powered by gulp but can be run via npm commands.
+Once this repo is cloned, run the following terminal command from the project root:
+
+    $ npm install
+
+The project is powered by gulp but can be run via npm commands:
 
     $ npm start
 
     $ npm run build
+
+Alternatively it can be run via gulp as follows:
+
+    $ gulp
+
+    $ gulp build
+
 
 ---
 

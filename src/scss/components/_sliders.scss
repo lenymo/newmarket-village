@@ -3,3 +3,150 @@
 //
 //  SLIDERS
 //––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  LAYOUT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$slider-height-xs: 250px;
+$slider-height-sm: 350px;
+$slider-height-md: 500px;
+$slider-height-lg: 600px;
+$slider-height-xl: 650px;
+
+$slider-controls-btn-size-xs: 30px;
+$slider-controls-svg-height-xs: 18px;
+$slider-controls-svg-margin-top-xs: ($slider-controls-btn-size-xs - $slider-controls-svg-height-xs) / 2;
+
+$slider-controls-btn-size-sm: 50px;
+$slider-controls-svg-height-sm: 28px;
+$slider-controls-svg-margin-top-sm: ($slider-controls-btn-size-sm - $slider-controls-svg-height-sm) / 2;
+
+
+
+//
+//  WRAPPER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__wrapper {
+  position: relative;
+}
+
+
+//
+//  SLIDE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__slide {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: $slider-height-xs;
+  position: relative;
+}
+
+@include respond-above(xs) {
+  .tiny-slider__slide {
+    height: $slider-height-sm;
+  }
+}
+
+@include respond-above(sm) {
+  .tiny-slider__slide {
+    height: $slider-height-md;
+  }
+}
+
+@include respond-above(md) {
+  .tiny-slider__slide {
+    height: $slider-height-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .tiny-slider__slide {
+    height: $slider-height-xl;
+  }
+}
+
+
+//
+//  CONTENT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__slide__content {
+  opacity: .4;
+  transition: all .8s ease;
+}
+
+.tiny-slider__slide {
+  &.tns-slide-active {
+    .tiny-slider__slide__content {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+//
+//  CONTROLS - BUTTON
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__controls__btn {
+  background-color: rgba($black, .5);
+  color: $white;
+  cursor: pointer;
+  height: $slider-controls-btn-size-xs;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s ease;
+  width: $slider-controls-btn-size-xs;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: rgba($black, .95);
+  }
+}
+
+.tiny-slider__controls__btn--prev {
+  left: 0;
+}
+
+.tiny-slider__controls__btn--next {
+  right: 0;
+}
+
+@include respond-above(xs) {
+  .tiny-slider__controls__btn {
+    height: $slider-controls-btn-size-sm;
+    width: $slider-controls-btn-size-sm;
+  }
+}
+
+
+//
+//  CONTROLS - SVG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tiny-slider__controls__svg {
+  display: inline-block;
+  fill: $white;
+  height: $slider-controls-svg-height-xs;
+  margin-top: $slider-controls-svg-margin-top-xs;
+  position: relative;
+  vertical-align: top;
+}
+
+@include respond-above(xs) {
+  .tiny-slider__controls__svg {
+    height: $slider-controls-svg-height-sm;
+    margin-top: $slider-controls-svg-margin-top-sm;
+  }
+}

@@ -9,6 +9,14 @@
 //  FEATURE TILES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+@include respond-below(sm) {
+  .page-home {
+    .feature-tiles {
+      padding-bottom: 0;
+    }
+  }
+}
+
 @include respond-above(sm) {
   .page-home {
     .feature-tiles {

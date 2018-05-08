@@ -12,6 +12,13 @@
   text-align: center;
 }
 
+@include respond-below(xs) {
+  .footer-signup {
+    padding-bottom: $gutter * 3;
+    padding-top: $gutter * 3;
+  }
+}
+
 .footer-signup__icon {
   display: block;
   margin-bottom: $gutter;

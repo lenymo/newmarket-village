@@ -22,6 +22,7 @@ Alternatively it can be run via gulp as follows:
 
     $ gulp build
 
+The `$ npm start` and `gulp` tasks will open a new browser tab at: http://localhost:8000/ 
 
 ---
 

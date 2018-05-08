@@ -11,39 +11,59 @@ var SetupSliders = (function() {
 
 
   //
-  //  CONFIG
-  //––––––––––––––––––––––––––––––––––––––––––––––––––
-  
-  var config = {
-    slider: {
-      container: '.tiny-slider',
-      items: 1,
-      slideBy: 'page',
-      mouseDrag: true,
-      edgePadding: 30,
-      nav: false,
-      controlsContainer: '.tiny-slider__controls',
-      responsive: {
-        992: {
-          edgePadding: 60
-        },
-        1200: {
-          edgePadding: 120
-        }
-      }
-    }
-  };
-
-
-  //
-  //  SMOOTH SCROLL
+  //  SETUP SLIDERS
   //––––––––––––––––––––––––––––––––––––––––––––––––––
 
   function setupSliders() {
 
-    // Smoothly scroll to all anchors.
-    var slider = tns( config.slider );
-  }  
+    // Instantiate variables.
+    var sliders = document.querySelectorAll('.tiny-slider');
+    var slidersArr = [];
+    var sliderConfig = {};
+    var slider;
+    var sliderName;
+    var sliderContainerClassName;
+    var sliderControlsClassName;
+
+    // If there are sliders.
+    if ( sliders.length > 0 ) {
+
+      // Loop through all sliders.
+      for ( var i = 0; i < sliders.length; i++ ) {
+
+        // Get this slider.
+        slider = sliders[i];
+
+        // Get the slider name.
+        sliderName = slider.dataset.sliderName;
+
+        // Build class names for container and controls.
+        sliderContainerClassName = '.tiny-slider--' + sliderName;
+        sliderControlsClassName = '.tiny-slider__controls--' + sliderName;
+
+        // Build the slider config.
+        sliderConfig = {
+          container: sliderContainerClassName,
+          controlsContainer: sliderControlsClassName,
+          items: 1,
+          slideBy: 'page',
+          mouseDrag: true,
+          edgePadding: 30,
+          nav: false,
+          responsive: {
+            992: {
+              edgePadding: 60
+            },
+            1200: {
+              edgePadding: 120
+            }
+          }
+        };
+
+        slidersArr[i] = tns( sliderConfig );
+      }
+    }
+  }
 
 
   //

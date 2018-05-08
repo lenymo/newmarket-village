@@ -14,8 +14,40 @@
 //  SCROLL TO TOP
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.footer-bottom__scroll-to-top {
-  
+.footer-bottom__scroll-to-top__link {
+  color: $black;
+  text-decoration: none;
+}
+
+.footer-bottom__scroll-to-top__icon {
+  display: inline-block;
+  margin-right: $gutter * .25;
+  position: relative;
+  top: -3px;
+  vertical-align: top;
+}
+
+.footer-bottom__scroll-to-top__svg {
+  width: 25px;
+}
+
+.footer-bottom__scroll-to-top__link-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@include respond-above(sm) {
+  .footer-bottom__scroll-to-top__icon {
+    transition: all .4s ease-in-out;
+  }
+
+  .footer-bottom__scroll-to-top__link {
+    &:hover {
+      .footer-bottom__scroll-to-top__icon {
+        transform: translateY(-25%);
+      }
+    }
+  }
 }
 
 

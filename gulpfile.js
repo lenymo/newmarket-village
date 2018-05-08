@@ -40,8 +40,6 @@ gulp.task('scss', function () {
     .pipe( sourcemaps.init() )
     .pipe( sass().on('error', sass.logError) )
     .pipe( sass({outputStyle: 'compressed'}) )
-    // .pipe( sourcemaps.write() )
-    // .pipe( sourcemaps.init({loadMaps: true}) )
     .pipe( autoprefixer({
       browsers: [
         'last 5 version',
@@ -146,7 +144,6 @@ gulp.task('watch', ['scss', 'js', 'html', 'webserver'], function () {
   gulp.watch('src/scss/**/*', ['scss']);
   gulp.watch('src/js/**/*.js', ['js']);
   gulp.watch('src/html/**/*', ['html']);
-  // gulp.watch('src/img/**/*', ['img']);
 });
 
 

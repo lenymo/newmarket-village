@@ -18,10 +18,11 @@ var SetupSliders = (function() {
 
     // Smoothly scroll to all anchors.
     var slider = tns({
-      container: '.slider',
-      items: 3,
+      container: '.tiny-slider',
+      items: 1,
       slideBy: 'page',
-      autoplay: true
+      mouseDrag: true,
+      edgePadding: 30,
     });
   }  
 

@@ -69,6 +69,7 @@ gulp.task('js', function() {
     'build/js/**/*'
   ]);
 
+  // Compile JS.
   gulp.src('src/js/*.js')
     .pipe( sourcemaps.init() )
     .pipe( concat('app.min.js') )
@@ -76,7 +77,7 @@ gulp.task('js', function() {
     .pipe( sourcemaps.write('./') )
     .pipe( gulp.dest('build/js') );
 
-
+  // Copy vendor files.
   gulp.src('src/js/vendor/*.js')
     .pipe( gulp.dest('build/js/vendor') );
 

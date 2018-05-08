@@ -21,7 +21,16 @@ var SetupSliders = (function() {
       slideBy: 'page',
       mouseDrag: true,
       edgePadding: 30,
-      nav: false
+      nav: false,
+      controlsContainer: '.tiny-slider__controls',
+      responsive: {
+        992: {
+          edgePadding: 60
+        },
+        1200: {
+          edgePadding: 120
+        }
+      }
     }
   };
 

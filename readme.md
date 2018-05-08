@@ -41,3 +41,4 @@ JavaScript libraries:
 
 - [Rellax](https://github.com/dixonandmoe/rellax) for Parallax.
 - [Smooth scroll](http://github.com/cferdinandi/smooth-scroll) for smooth scrolling when #'s are clicked.
+- [Tiny slider](https://github.com/ganlanyuan/tiny-slider) for sliders / carousels.

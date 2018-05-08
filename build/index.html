@@ -227,16 +227,39 @@
   </main>
 
   <footer class="site-footer">
-    <section class="section section--footer-signup -has-dark-bg">
+    <section class="section section--footer-signup -has-dark-bg footer-signup">
   <div class="container container--footer-signup">
     <div class="row row--footer-signup">
       <div class="col-sm-12 col--footer-signup">
-        <h2>
+        <h2 class="section__title footer-signup__title">
           Sign Up Now!
         </h2>
-        <p>
+        <img src="/img/icon-yarn-gray.png" class="section__title__icon footer-sign__icon" alt="Icon">
+        <p class="footer-signup__sub-title">
           For all the latest offers, news and events, sign up now to our e-newsletter.
         </p>
+
+        <form class="form -has-dark-bg footer-signup__form">
+          <fieldset class="form__fieldset form__fieldset--inline">
+            <label for="name" class="form__field-label">
+              * First Name
+            </label>
+            <input type="text" class="form__field form__field--name" id="first-name" name="first-name" placeholder="Enter First Name" required>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__fieldset--inline">
+            <label for="name" class="form__field-label">
+              * Email
+            </label>
+            <input type="email" class="form__field form__field--email" id="email" name="email" placeholder="Enter Email" required>
+          </fieldset>
+
+          <footer class="form__footer">
+            <button class="btn form__footer__btn">
+              Subscribe
+            </button>
+          </footer><!-- .form__footer -->
+        </form>
       </div>
     </div><!-- .row -->
   </div><!-- .container -->

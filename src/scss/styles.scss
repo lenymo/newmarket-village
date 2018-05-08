@@ -44,8 +44,6 @@
 @import 'layout/site-header-nav-dropdowns';
 @import 'layout/site-header-nav-mobile';
 @import 'layout/site-header-nav-toggle';
-@import 'layout/site-header-hours';
-@import 'layout/site-header-search';
 @import 'layout/footer';
 @import 'layout/footer-signup';
 @import 'layout/footer-social';
@@ -65,6 +63,8 @@
 
 // Custom components.
 @import 'components/header-logo';
+@import 'components/header-hours';
+@import 'components/header-search';
 @import 'components/page-header';
 @import 'components/page-header-fixed';
 

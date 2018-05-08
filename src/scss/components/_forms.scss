@@ -4,3 +4,141 @@
 //  FORMS
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
+//
+//  FIELD VARIABLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Layout.
+$form-field-padding: 17px;
+
+// Field.
+$form-field-background-color: $white;
+$form-field-font-color: $base-font-color;
+$form-field-font-family: $base-font-family;
+$form-field-letter-spacing: .05em;
+$form-field-placeholder-color: #999;
+
+// Border.
+$form-field-border-radius: 0;
+$form-field-border-width: 0;
+
+// Border colors.
+$form-field-border-color: transparent;
+$form-field-border-color-focus: transparent;
+
+
+//
+//  BASE STYLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  font-family: $form-field-font-family;
+  letter-spacing: $form-field-letter-spacing;
+}
+
+
+
+//
+//  FIELDSET
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.form__fieldset {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: $gutter;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+@include respond-above(sm) {
+  .form__fieldset {
+    margin-bottom: $gutter * 1.5;
+  }
+}
+
+.form__fieldset--inline {
+  margin-left: $gutter * .25;
+  margin-right: $gutter * .25;
+  width: auto;
+}
+
+
+//
+//  LABEL
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.form__field-label {
+  margin-bottom: $gutter * .25;
+  display: block;
+}
+
+
+//
+//  FIELD
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.form__field {
+  appearance: none;
+  background-color: $form-field-background-color;
+  border: $form-field-border-width solid $form-field-border-color;
+  border-radius: $form-field-border-radius;
+  color: $form-field-font-color;
+  display: block;
+  font-family: $form-field-font-family;
+  letter-spacing: $form-field-letter-spacing;
+  padding: $form-field-padding;
+  transition: all .2s ease;
+  vertical-align: top;
+  width: 100%;
+
+  @include placeholder {
+    color: $form-field-placeholder-color;
+  }
+}
+
+
+//
+//  FORM FOOTER
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.form__footer {
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  vertical-align: top;
+}
+
+.form__footer--inline {
+  display: inline-block;
+}
+
+.form__footer__btn {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+
+//
+//  DARK BG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.form {
+  &.-has-dark-bg {
+    .form__field-label {
+      color: $white;
+    }
+  }
+}

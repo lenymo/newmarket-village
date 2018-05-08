@@ -4,6 +4,50 @@
 //  FOOTER SIGNUP
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.section--footer-signup {
+.footer-signup {
+  background-attachment: fixed;
+  background-image: url('/img/footer-signup-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+}
+
+.footer-signup__icon {
+  display: block;
+  margin-bottom: $gutter;
+}
+
+
+//
+//  FORM
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.footer-signup__form {
+  .form__footer__btn {
+    font-size: rem(18px);
+  }
+}
+
+@include respond-below(sm) {
+  .footer-signup__form {
+    .form__fieldset {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .form__footer__btn {
+      width: 100%;
+    }
+  }
+}
+
+@include respond-above(sm) {
+  .footer-signup__form {
+    .form__fieldset {
+      padding-left: $gutter * .5;
+      padding-right: $gutter * .5;
+      width: 47%;
+    }
+  }
 }

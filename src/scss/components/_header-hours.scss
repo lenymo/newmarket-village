@@ -84,6 +84,11 @@
 //  BUTTON
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.header-hours__btn {
+  font-size: rem(14px);
+  padding: ($gutter * .5) ($gutter * .75);
+}
+
 @include respond-below(sm) {
   .header-hours__btn {
     .desktop-only {

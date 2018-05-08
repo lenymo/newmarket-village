@@ -9,6 +9,9 @@
 //  VARIABLES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Layout.
+$btn-padding: ($gutter * .75) ($gutter);
+
 // Colors.
 $btn-bg-color: transparent;
 $btn-bg-color-hover: $black;
@@ -21,8 +24,8 @@ $btn-border-width: 2px;
 $btn-border-color: $black;
 
 // Typography.
-$btn-font-size: rem(14px);
-$btn-font-weight: bold;
+$btn-font-size: rem(18px);
+$btn-font-weight: normal;
 $btn-letter-spacing: .05em;
 
 
@@ -41,7 +44,7 @@ $btn-letter-spacing: .05em;
   font-weight: $btn-font-weight;
   letter-spacing: $btn-letter-spacing;
   line-height: 1;
-  padding: ($gutter * .5) ($gutter * .75);
+  padding: $btn-padding;
   text-decoration: none;
   transition: all .2s ease;
 
@@ -65,5 +68,17 @@ $btn-letter-spacing: .05em;
       background: $btn-bg-color-hover;
       color: $btn-font-color-hover;
     }
+  }
+}
+
+
+//
+//  DARK BG
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.-has-dark-bg {
+  .btn {
+    color: $white;
+    border-color: $white;
   }
 }

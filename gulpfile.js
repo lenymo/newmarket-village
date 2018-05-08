@@ -37,7 +37,6 @@ gulp.task('scss', function () {
   del(['build/css/**/*']);
 
   gulp.src('src/scss/**/*.scss')
-
     .pipe( sourcemaps.init() )
     .pipe( sass().on('error', sass.logError) )
     .pipe( sass({outputStyle: 'compressed'}) )
@@ -84,7 +83,6 @@ gulp.task('js', function() {
     .pipe( uglify().on('error', console.log) )
     .pipe( sourcemaps.write('./') )
     .pipe( gulp.dest('build/js/vendor') );
-
 });
 
 

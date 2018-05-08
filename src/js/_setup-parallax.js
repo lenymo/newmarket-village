@@ -20,7 +20,7 @@ var SetupParallax = (function() {
   
 
   //
-  //  SMOOTH SCROLL
+  //  PARALLAX
   //––––––––––––––––––––––––––––––––––––––––––––––––––
 
   function setupParallax() {
@@ -31,10 +31,8 @@ var SetupParallax = (function() {
     // If viewport is wide enough.
     if ( w >= config.onlyRunAbove ) {
 
-      // Smoothly scroll to all anchors.
-      var rellax = new Rellax('.-has-parallax', {
-        // center: true
-      });
+      // Initialise Rellax.
+      var rellax = new Rellax('.-has-parallax');
     }
   }  
 

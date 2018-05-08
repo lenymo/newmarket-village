@@ -93,7 +93,7 @@ gulp.task('html', function() {
     .pipe(include({
       prefix: '@@',
       basepath: '@file'
-    }))
+    }).on('error', console.log))
     .pipe( gulp.dest('build/') );
 });
 

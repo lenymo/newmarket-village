@@ -66,10 +66,10 @@ gulp.task('js', function() {
 
   // Clear the build/js directory.
   del([
-    'build/js/**/*'
+    'build/js/**'
   ]);
 
-  // Compile JS.
+  // Compile app JS.
   gulp.src('src/js/*.js')
     .pipe( sourcemaps.init() )
     .pipe( concat('app.min.js') )
@@ -77,8 +77,12 @@ gulp.task('js', function() {
     .pipe( sourcemaps.write('./') )
     .pipe( gulp.dest('build/js') );
 
-  // Copy vendor files.
+  // Mash vendor JS files.
   gulp.src('src/js/vendor/*.js')
+    .pipe( sourcemaps.init() )
+    .pipe( concat('vendor.min.js') )
+    .pipe( uglify().on('error', console.log) )
+    .pipe( sourcemaps.write('./') )
     .pipe( gulp.dest('build/js/vendor') );
 
 });

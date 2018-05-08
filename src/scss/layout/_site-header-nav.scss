@@ -74,6 +74,10 @@ $site-header-nav-letter-spacing: .05em;
     padding: $site-header-nav-padding-md;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   .site-header-nav__list-item {

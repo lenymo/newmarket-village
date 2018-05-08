@@ -1,0 +1,23 @@
+
+
+//
+//  SOCIAL ICONS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$social-icon-size: 50px;
+
+.social-icons {
+  margin-top: $gutter;
+}
+
+.social-icons__list-item {
+  display: inline-block;
+  margin-left: $gutter * .25;
+  margin-right: $gutter * .25;
+}
+
+.social-icons__svg {
+  fill: $black;
+  height: $social-icon-size;
+  width: $social-icon-size;
+}

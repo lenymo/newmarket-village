@@ -43,6 +43,8 @@
 
   .footer-bottom__scroll-to-top__link {
     &:hover {
+      text-decoration: none;
+      
       .footer-bottom__scroll-to-top__icon {
         transform: translateY(-25%);
       }

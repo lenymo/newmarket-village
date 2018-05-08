@@ -101,7 +101,13 @@
 }
 
 .home-centre-location__contact__map-btn {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter * 2;
+}
+
+@include respond-above(lg) {
+  .home-centre-location__contact__map-btn {
+    margin-bottom: $gutter;
+  }
 }
 
 // Map.

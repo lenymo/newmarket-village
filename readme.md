@@ -4,7 +4,17 @@ A code test I completed for a job application in May 2018.
 
 ---
 
-## Tech summary.
+## How to use this
+
+This project is powered by gulp but can be run via npm commands.
+
+    $ npm start
+
+    $ npm run build
+
+---
+
+## Tech summary
 
 Below is  a summary of technology used for this build.
 

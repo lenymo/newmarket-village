@@ -28,7 +28,7 @@ The `$ npm start` and `gulp` tasks will open a new browser tab at: http://localh
 
 ## Tech summary
 
-Below is  a summary of technology used for this build.
+Below is  a summary of tech stack used for this build.
 
 Gulp.js for task management including:
 

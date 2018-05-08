@@ -1,0 +1,114 @@
+
+
+//
+//  FEATURE TILES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+//
+//  VARIABLES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$feature-tile-height-xs: 250px;
+$feature-tile-height-sm: 300px;
+$feature-tile-height-md: 200px;
+$feature-tile-height-lg: 300px;
+$feature-tile-height-xl: 350px;
+
+
+//
+//  TILE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.feature-tile {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $feature-tile-height-xs;
+  margin-bottom: $gutter;
+  position: relative;
+  text-align: center;
+}
+
+@include respond-above(xs) {
+  .feature-tile {
+    height: $feature-tile-height-sm;
+  }
+}
+
+@include respond-above(sm) {
+  .feature-tile {
+    height: $feature-tile-height-md;
+  }
+}
+
+@include respond-above(md) {
+  .feature-tile {
+    height: $feature-tile-height-lg;
+  }
+}
+
+@include respond-above(lg) {
+  .feature-tile {
+    height: $feature-tile-height-xl;
+  }
+}
+
+
+//
+//  CONTENT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.feature-tile__content {
+  padding: $gutter;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+
+//
+//  TITLE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.feature-tile__title {
+  margin-bottom: $gutter * .5;
+}
+
+
+//
+//  LINK
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.feature-tile__title {
+  margin-bottom: $gutter * .5;
+}
+
+
+//
+//  CONTENT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.feature-tile__overlay {
+  background-color: rgba($black, .3);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@include respond-above(sm) {
+  .feature-tile__overlay {
+    transition: all .2s ease;
+  }
+
+  .feature-tile {
+    &:hover {
+      .feature-tile__overlay {
+        background-color: rgba($black, .15);
+      }
+    }
+  }
+}

@@ -35,4 +35,21 @@ $dark-bg-font-color: $white;
       }
     }
   }
+
+  a {
+    color: $white;
+  }
+}
+
+@include respond-above(sm) {
+  .-has-dark-bg {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
 }

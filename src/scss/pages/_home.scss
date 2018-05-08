@@ -4,15 +4,45 @@
 //  HOME
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.page-home {
-  // background: $color-gray-e;
-}
-
 
 //
-//  NEWS AND EVENTS
+//  FEATURE TILES
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.home-news-and-events {
-  
+@include respond-above(sm) {
+  .page-home {
+    .feature-tiles {
+      padding-top: $gutter * 4;
+    }
+  }
+}
+
+@include respond-above(md) {
+  .page-home {
+    .feature-tiles {
+      padding-top: $gutter * 5;
+    }
+  }
+}
+
+@include respond-above(lg) {
+  .page-home {
+    .feature-tiles {
+      padding-top: $gutter * 6;
+    }
+
+    .col--feature-tiles {
+      &:nth-child(1) {
+        .feature-tile {
+          margin-right: 20px;
+        }
+      }
+
+      &:nth-child(2) {
+        .feature-tile {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 }

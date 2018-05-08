@@ -11,13 +11,31 @@ var SetupParallax = (function() {
 
 
   //
+  //  CONFIG
+  //––––––––––––––––––––––––––––––––––––––––––––––––––
+
+  var config = {
+    onlyRunAbove: 768
+  };
+  
+
+  //
   //  SMOOTH SCROLL
   //––––––––––––––––––––––––––––––––––––––––––––––––––
 
   function setupParallax() {
 
-    // Smoothly scroll to all anchors.
-    var rellax = new Rellax('.-has-parallax');
+    // Get viewport width.
+    var w = Helpers.getViewportWidth();
+
+    // If viewport is wide enough.
+    if ( w >= config.onlyRunAbove ) {
+
+      // Smoothly scroll to all anchors.
+      var rellax = new Rellax('.-has-parallax', {
+        // center: true
+      });
+    }
   }  
 
 

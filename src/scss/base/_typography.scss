@@ -45,6 +45,10 @@ $h3-font-size-xs: rem(21px);
 $h3-font-size-sm: rem(24px);
 $h3-font-size-md: rem(30px);
 
+$h4-font-size-xs: rem(21px);
+$h4-font-size-sm: rem(24px);
+$h4-font-size-md: rem(24px);
+
 
 //
 //  GENERAL SIZES, WEIGHTS, ETC
@@ -91,6 +95,11 @@ h6 {
   }
 }
 
+
+//
+//  H1
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 h1 {
   font-size: $h1-font-size-xs;
 }
@@ -106,6 +115,11 @@ h1 {
     font-size: $h1-font-size-md;
   }
 }
+
+
+//
+//  H2
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 
 h2 {
   font-size: $h2-font-size-xs;
@@ -123,6 +137,11 @@ h2 {
   }
 }
 
+
+//
+//  H3
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
 h3 {
   font-size: $h3-font-size-xs;
 }
@@ -136,6 +155,27 @@ h3 {
 @include respond-above(sm) {
   h3 {
     font-size: $h3-font-size-md;
+  }
+}
+
+
+//
+//  H4
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+h4 {
+  font-size: $h4-font-size-xs;
+}
+
+@include respond-above(xs) {
+  h4 {
+    font-size: $h4-font-size-sm;
+  }
+}
+
+@include respond-above(sm) {
+  h4 {
+    font-size: $h4-font-size-md;
   }
 }
 

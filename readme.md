@@ -38,7 +38,7 @@ Gulp.js for task management including:
 - File includes ([gulp-file-include](https://www.npmjs.com/package/gulp-file-include))
 - Web server ([gulp-web-server](https://github.com/schickling/gulp-webserver))
 
-JavaScript libraries:
+I was able to avoid jQuery thanks to the following awesome JavaScript libraries:
 
 - [Rellax](https://github.com/dixonandmoe/rellax) for Parallax.
 - [Smooth scroll](http://github.com/cferdinandi/smooth-scroll) for smooth scrolling when #'s are clicked.

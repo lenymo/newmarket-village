@@ -46,3 +46,75 @@
     }
   }
 }
+
+
+//
+//  CENTRE LOCATION
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@include respond-above(md) {
+  .page-home {
+    .col--home-centre-location--contact {
+      padding-bottom: $gutter;
+    }
+  }
+}
+
+@include respond-above(lg) {
+  .page-home {
+    .col--home-centre-location--contact {
+      padding-bottom: 0;
+      padding-top: $gutter * 4;
+    }
+  }
+}
+
+// Contact details.
+.home-centre-location {
+  .section__title__icon {
+    margin-bottom: $gutter * 2;
+  }
+}
+
+.home-centre-location__contact__item {
+  display: inline-block;
+  margin-bottom: $gutter * 2;
+  width: 100%;
+}
+
+.home-centre-location__contact__svg {
+  fill: #999;
+  float: left;
+  margin-right: $gutter;
+  width: 32px;
+}
+
+.home-centre-location__contact__detail {
+  margin-bottom: 0;
+  padding-top: 10px;
+}
+
+.home-centre-location__contact__item--address {
+  .home-centre-location__contact__detail {
+    padding-top: 0;
+  }
+}
+
+.home-centre-location__contact__map-btn {
+  margin-bottom: $gutter;
+}
+
+// Map.
+.page-home {
+  .map {
+    height: 250px;
+  }
+}
+
+@include respond-above(sm) {
+  .page-home {
+    .map {
+      height: 400px;
+    }
+  }
+}

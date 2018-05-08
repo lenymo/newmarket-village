@@ -54,9 +54,6 @@ $btn-letter-spacing: .05em;
     text-decoration: none;
   }
 
-  &:hover {
-  }
-
   &:focus {
     outline: 0;
   }
@@ -78,7 +75,18 @@ $btn-letter-spacing: .05em;
 
 .-has-dark-bg {
   .btn {
-    color: $white;
     border-color: $white;
+    color: $white;
+  }
+}
+
+@include respond-above(sm) {
+  .-has-dark-bg {
+    .btn {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
   }
 }

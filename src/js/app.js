@@ -11,5 +11,6 @@
   SetupSmoothScroll.init();
   SetupParallax.init();
   SetupSliders.init();
+  SetupGoogleMaps.init();
 
 })();

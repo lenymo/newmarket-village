@@ -379,15 +379,41 @@
     </div><!-- .tiny-slider__controls -->
   </div><!-- .tiny-slider__wrapper -->
 </section><!-- .section -->
-<section class="section section--centre-location centre-location">
-  <div class="container container--centre-location">
-    <div class="row row--centre-location">
-      <div class="col-sm-12 col--centre-location">
-        <h2 class="section__title footer-signup__title">
+<section class="section section--home-centre-location home-centre-location">
+  <div class="container container--home-centre-location">
+    <div class="row row--home-centre-location">
+      <div class="col-sm-12 col--home-centre-location">
+        <h2 class="section__title">
           Centre Location
         </h2>
-        <img src="/img/icon-yarn-gray.png" class="section__title__icon footer-sign__icon" alt="Icon">
+        <img src="/img/icon-yarn-gray.png" class="section__title__icon" alt="Icon">
       </div><!-- .col -->
+    </div><!-- .row -->
+
+    <div class="row row--home-centre-location">
+      <div class="col-lg-5 col--home-centre-location--contact">
+        <div class="home-centre-location__contact">
+          <div class="home-centre-location__contact__item home-centre-location__contact__item--address">
+            <svg class="home-centre-location__contact__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.34 54.8"><path d="M19.4 12a7 7 0 1 0 7 7 7 7 0 0 0-7-7zm0 12a5 5 0 1 1 5-5 5 5 0 0 1-5 5z"/><path d="M32.7 5.6A19 19 0 0 0 19.2 0 19.4 19.4 0 0 0 5.6 5.6c-6.7 6.7-7.5 19.3-1.8 27l15.4 22.2 15.3-22.2c5.8-7.7 4.9-20.3-1.8-27zm.2 25.8L19.2 51.2 5.4 31.4C.2 24.5 1 13.1 7 7a17.14 17.14 0 0 1 24.2 0c6.2 6.1 6.9 17.5 1.7 24.4z"/></svg>
+            <p class="home-centre-location__contact__detail">
+              400 Newmarket Road, Newmarket QLD
+            </p>
+          </div><!-- .home-centre-location__contact__item -->
+
+          <div class="home-centre-location__contact__item home-centre-location__contact__item--phone">
+            <svg class="home-centre-location__contact__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 304.5 472.7"><path d="M274.7 0H30A30 30 0 0 0 0 29.9v412.9a29.92 29.92 0 0 0 29.9 29.9h244.7a29.92 29.92 0 0 0 29.9-29.9V29.9A29.77 29.77 0 0 0 274.7 0zM15 75.2h274.6v312.7H15zM30 15h244.7a14.94 14.94 0 0 1 14.9 14.9v35.3H15V29.9A15 15 0 0 1 30 15zm244.7 442.8H30a14.94 14.94 0 0 1-14.9-14.9v-45h274.6v45a15.09 15.09 0 0 1-15 14.9z"/><path d="M152.3 404.6a24.6 24.6 0 1 0 24.6 24.6 24.65 24.65 0 0 0-24.6-24.6zm0 39.1a14.6 14.6 0 1 1 14.6-14.6 14.62 14.62 0 0 1-14.6 14.6zm-34-396.1h68a5 5 0 0 0 0-10h-68a5 5 0 0 0 0 10zm-18 0a4.69 4.69 0 0 0 3.5-1.5 5.09 5.09 0 0 0 1.5-3.5 4.69 4.69 0 0 0-1.5-3.5 5.09 5.09 0 0 0-3.5-1.5 4.69 4.69 0 0 0-3.5 1.5 5.09 5.09 0 0 0-1.5 3.5 5.13 5.13 0 0 0 5 5z"/></svg>
+            <p class="home-centre-location__contact__detail">
+              +61 2 9891 3330
+            </p>
+          </div><!-- .home-centre-location__contact__item -->
+
+          <a class="btn home-centre-location__contact__map-btn" href="https://www.google.com.au/maps/place/Newmarket+Village/@-27.4377651,153.0083865,19z/data=!4m5!3m4!1s0x6b91576747ebcb7f:0xc85f276a2fb258ab!8m2!3d-27.43717!4d153.008062" target="_blank">View on Google Maps</a>
+        </div><!-- .home-centre-location__contact -->
+      </div><!-- .col -->
+
+      <div class="col-lg-7 col--home-centre-location--map">
+        <div id="map" class="map"></div>
+      </div>
     </div><!-- .row -->
   </div><!-- .container -->
 </section><!-- .section -->
@@ -507,6 +533,7 @@
 </div><!-- .site-content -->
 
 <script type="text/javascript" src="js/vendor/vendor.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjX6Yz16RRKn9Ty232Bg-G9NT_g2Eg1r4"></script>
 <script type="text/javascript" src="js/app.min.js"></script>
   
 </body>

@@ -29,7 +29,6 @@ var SetupGoogleMaps = (function() {
 
     // When the window has loaded, initialise Google Maps.
     google.maps.event.addDomListener(window, 'load', initialise);
-    
   }
 
 
@@ -61,7 +60,6 @@ var SetupGoogleMaps = (function() {
     // Map icon.
     var iconWidth = config.iconWidth;
     var iconHeight = config.iconHeight;
-
     var iconURL = config.iconURL;
     var iconSize = new google.maps.Size(iconWidth, iconHeight);
 
@@ -71,6 +69,7 @@ var SetupGoogleMaps = (function() {
      scaledSize: new google.maps.Size(iconWidth, iconHeight),
     };
 
+    // Add marker to map.
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(lat, lng),
       map: map,

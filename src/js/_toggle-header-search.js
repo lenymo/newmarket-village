@@ -14,7 +14,6 @@ var ToggleHeaderSearch = (function() {
   var config = {
     searchToggleClass: '-search-is-open'
   };
-  
 
 
   //
@@ -62,8 +61,6 @@ var ToggleHeaderSearch = (function() {
 
     bodyElem.classList.remove( config.searchToggleClass );
   }
-
-  
 
 
   //

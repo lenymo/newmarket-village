@@ -13,10 +13,17 @@ var Helpers = (function() {
 
   function getViewportWidth() {
 
+    // Get viewport width.
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    
     return w;
 
   } // getViewportWidth()
+
+
+  //
+  //  RETURN
+  //––––––––––––––––––––––––––––––––––––––––––––––––––
 
   return {
     getViewportWidth: getViewportWidth,

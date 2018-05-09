@@ -8,6 +8,16 @@ var ToggleMobileMenu = (function() {
 
 
   //
+  //  CONFIG
+  //––––––––––––––––––––––––––––––––––––––––––––––––––
+
+  var config = {
+    siteNavOpenClass: '-menu-is-toggled'
+  };
+  
+
+
+  //
   //  TOGGLE MOBILE MENU
   //––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -22,11 +32,17 @@ var ToggleMobileMenu = (function() {
       siteNavToggle.addEventListener('click', toggleSiteNav, false);
     }
 
+
+    //
+    //  TOGGLE SITE NAV
+    //––––––––––––––––––––––––––––––––––––––––––––––––––
+
     function toggleSiteNav() {
 
-      var siteNavOpenClass = '-menu-is-toggled';
+      var siteNavOpenClass = config.siteNavOpenClass;
       var siteNavOpenFlag = false;
 
+      // Get body element and its classes.
       var bodyElem = document.querySelector('body');
       var bodyElemClasses = bodyElem.classList;
 
@@ -49,14 +65,12 @@ var ToggleMobileMenu = (function() {
 
         // Close the menu.
         bodyElem.classList.remove(siteNavOpenClass);
-        // console.log('Mobile menu was closed.');
 
       // If the menu is closed.
       } else {
 
         // Open the menu.
         bodyElem.className += ' ' + siteNavOpenClass;
-        // console.log('Mobile menu was opened.');
       }
     }
   }

@@ -81,6 +81,12 @@
   color: #ccc;
 }
 
+.footer-bottom__copyright__sep {
+  display: inline-block;
+  margin-left: $gutter * .5;
+  margin-right: $gutter * .5;
+}
+
 @include respond-above(sm) {
   .footer-bottom__copyright {
     text-align: center;
@@ -88,12 +94,6 @@
 
   .footer-bottom__copyright__text {
     margin-bottom: 0;
-  }
-
-  .footer-bottom__copyright__sep {
-    display: inline-block;
-    margin-left: $gutter * .25;
-    margin-right: $gutter * .25;
   }
 }
 
@@ -106,12 +106,12 @@
   color: #ccc;
 }
 
+.footer-bottom__site-by__text {
+  margin-bottom: 0;
+}
+
 @include respond-above(sm) {
   .footer-bottom__site-by {
     text-align: right;
-  }
-
-  .footer-bottom__site-by__text {
-    margin-bottom: 0;
   }
 }

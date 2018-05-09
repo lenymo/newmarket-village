@@ -6,7 +6,7 @@ A code test I completed for a job application in May 2018.
 
 ## How to use this
 
-Once this repo is cloned, run the following terminal command from the project root:
+Once the repo is cloned, run the following terminal command from the project root:
 
     $ npm install
 
@@ -16,13 +16,15 @@ The project is powered by gulp but can be run via npm commands:
 
     $ npm run build
 
-Alternatively it can be run via gulp as follows:
+Alternatively use gulp commands as follows:
 
     $ gulp
 
     $ gulp build
 
-The `$ npm start` and `gulp` tasks will open a new browser tab at: http://localhost:8000/ 
+The `$ npm start` and `$ gulp` tasks will open a new browser tab at: http://localhost:8000/ and watch SCSS, JS and HTML files in the /src/ directory.
+
+Images in the /src/img/ directory are optimised and copied to /build/img/ during the `$ npm run build` or `$ gulp build` tasks.
 
 ---
 

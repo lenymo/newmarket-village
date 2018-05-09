@@ -34,14 +34,14 @@ Below is  a summary of tech stack used for this build.
 
 Gulp.js for task management including:
 
-- SCSS (autoprefixer)
-- JavaScript
+- SCSS (sass, autoprefixer)
+- JavaScript (concat, uglify)
 - Images (imagemin)
-- File includes ([gulp-file-include](https://www.npmjs.com/package/gulp-file-include))
+- File includes ([gulp-file-include](https://www.npmjs.com/package/gulp-file-include)) to mash together HTML
 - Web server ([gulp-web-server](https://github.com/schickling/gulp-webserver))
 
 I was able to avoid jQuery thanks to the following awesome JavaScript libraries:
 
-- [Rellax](https://github.com/dixonandmoe/rellax) for Parallax.
-- [Smooth scroll](http://github.com/cferdinandi/smooth-scroll) for smooth scrolling when #'s are clicked.
-- [Tiny slider](https://github.com/ganlanyuan/tiny-slider) for sliders / carousels.
+- [Rellax](https://github.com/dixonandmoe/rellax) for Parallax
+- [Smooth scroll](http://github.com/cferdinandi/smooth-scroll) for smooth scrolling when #'s are clicked
+- [Tiny slider](https://github.com/ganlanyuan/tiny-slider) for sliders / carousels

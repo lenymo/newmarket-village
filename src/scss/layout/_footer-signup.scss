@@ -19,6 +19,13 @@
   }
 }
 
+@include respond-above(sm) {
+  .footer-signup {
+    padding-bottom: $gutter * 5;
+    padding-top: $gutter * 5;
+  }
+}
+
 .footer-signup__icon {
   display: block;
   margin-bottom: $gutter;
